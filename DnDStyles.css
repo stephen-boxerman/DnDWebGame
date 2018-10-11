@@ -18,3 +18,38 @@ div.town
 	width: 200px;
 	height: 50px;
 }
+
+div.gold
+{
+	border: solid black 1px;
+	margin-left: 15px;
+	margin-bottom: 35px;
+	width: 200px;
+	height: 25px;
+}
+
+div.display
+{
+	border: solid black 1px;
+	margin-left: 15px;
+	margin-right: 15px;
+	height: 600px;
+	
+}
+
+button
+{
+	position:;
+	width: 150px;
+	height: 35px;
+	border: solid black;
+	border-radius: 10px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	background-color: #D4D4D4;
+}
+
+button:hover
+{
+	background-color: #EBEBEB;
+}
