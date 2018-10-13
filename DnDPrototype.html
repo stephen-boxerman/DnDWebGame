@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<table width="100%" height="762" border="1">
+<table width="100%" height="762">
   <tbody>
     <tr>
       <td width="18%" height="227"><div class="stat">Content for  class "stat" Goes Here</div>
@@ -15,7 +15,7 @@
       <div class="stat">Content for  class "stat" Goes Here</div>
       <div class="stat">Content for  class "stat" Goes Here</div>
       <div class="stat">Content for  class "stat" Goes Here</div></td>
-      <td colspan="3" rowspan="4"><div class="display">Content for  class "display" Goes He</div></td>
+      <td colspan="3" rowspan="4"><div class="display" id="display">Content for  class "display" Goes He</div></td>
     </tr>
     <tr>
       <td height="187"><div class="gold" margin-botome>Content for  class "stat" Goes Here</div>
@@ -30,31 +30,36 @@
     <tr>
       <td width="10%">&nbsp;</td>
       <td width="66%" height="102">
-		  <button>hello world</button>
-		  <button>hello world</button>
-		  <button>hello world</button>
-		  <button>hello world</button>
-		  <button>hello world</button>
-		  <button>hello world</button>
-		  <button>hello world</button>
-		  <button>hello world</button>
-		  <button>hello world</button>
-		  <button>hello world</button>
-		  <button id="CB1" z-index="-1">hello world</button>
-		  <button id="CB2" z-index="-1">hello world</button>
-		  <button id="CB3" z-index="-1">hello world</button>
-		  <button id="CB4" z-index="-1">hello world</button>
-		  <button id="CB5" z-index="-1">hello world</button>
-		  <button id="CB6" z-index="-1">hello world</button>
-		  <button id="CB7" z-index="-1">hello world</button>
-		  <button id="CB8" z-index="-1">hello world</button>
-		  <button id="CB9" z-index="-1">hello world</button>
-		  <button id="CB10" z-index="-1">hello world</button>
+		  <button id="B1">hello world</button>
+		  <button id="B2">hello world</button>
+		  <button id="B3">hello world</button>
+		  <button id="B4">hello world</button>
+		  <button id="B5">hello world</button>
+		  <button id="B6">hello world</button>
+		  <button id="B7">hello world</button>
+		  <button id="B8">hello world</button>
+		  <button id="B9">hello world</button>
+		  <button id="B10">hello world</button>
 		</td>
       <td width="6%">&nbsp;</td>
     </tr>
   </tbody>
 </table>
-<script src="DnDCode.js"></script>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+	$(document).ready (function(){
+		var element = document.createElement("script");
+		element.src = "text.js";
+		document.body.appendChild(element);
+	});
+</script>
+<script>
+	$( window ).on( "load", function()
+	{
+		var element = document.createElement("script");
+		element.src = "DnDCode.js";
+		document.body.appendChild(element);
+	})
+</script>
 </body>
 </html>

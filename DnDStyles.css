@@ -34,12 +34,17 @@ div.display
 	margin-left: 15px;
 	margin-right: 15px;
 	height: 600px;
-	
+	padding: 20px;
+}
+
+div.button_container
+{
+	position: absolute;
+	width: 859px
 }
 
 button
 {
-	position:;
 	width: 150px;
 	height: 35px;
 	border: solid black;
@@ -47,9 +52,15 @@ button
 	margin-right: 15px;
 	margin-bottom: 15px;
 	background-color: #D4D4D4;
+	visibility: "hidden";
 }
 
 button:hover
 {
-	background-color: #EBEBEB;
+	background-color: #E4E4E4;
+}
+
+button:disabled
+{
+	background-color: #AAAAAA;
 }
