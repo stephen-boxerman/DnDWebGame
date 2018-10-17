@@ -32,12 +32,7 @@ class Player
 		this.statMods.cha = 0;
 		
 		this.gold = 0;
-		this.gender = 0;
-		this.pronouns = [];
-		this.heatCycle = -1;
-		this.inHeat = false;
-		this.pregDur = 0;
-		this.isPreg = false;
+		
 	}
 	
 	get race()
@@ -102,62 +97,6 @@ class Player
 	set gold(num)
 	{
 		this.gold += num;
-	}
-	
-	get gender()
-	{
-		return this.gender;
-	}
-	
-	set gender(gender)
-	{
-		this.gender = gender;
-	}
-	
-	getPronouns(idx)
-	{
-		return this.pronouns[idx];
-	}
-	
-	setPronouns()
-	{
-		switch(this.gender)
-		{
-			case("male"):
-			case("cuntboy"):
-			case("male-herm"):
-				{
-					this.pronouns = ["he","him","his"];
-					break;
-				}
-			case("female"):
-			case("dickgirl"):
-			case("herm"):
-				{
-					this.pronouns = ["she","her","hers"];
-					break;
-				}
-		}
-	}
-	
-	get heatCycle()
-	{
-		return this.heatCycle;
-	}
-	
-	get inHeat()
-	{
-		return this.inHeat;
-	}
-	
-	get pregDur()
-	{
-		return this.pregDur;
-	}
-	
-	get isPreg()
-	{
-		return this.isPreg;
 	}
 	
 }
