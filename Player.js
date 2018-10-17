@@ -99,4 +99,5 @@ class Player
 		this.gold += num;
 	}
 	
+	
 }

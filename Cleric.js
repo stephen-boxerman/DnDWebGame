@@ -12,7 +12,7 @@ class Cleric extends pc
 	constructor()
 	{
 		super();
-		this.rng = new RNG();
+		this.rng = new rng();
 		
 		var statSet1 = this.getStats();
 		var statSet2 = this.getStats();
@@ -34,11 +34,11 @@ class Cleric extends pc
 
 		if(count1 > count2)
 			{
-				this.setStats(statSet1);
+				this.Stats(statSet1);
 			}
 		else
 			{
-				this.setStats(statSet2);
+				this.Stats(statSet2);
 			}
 		
 	}
@@ -63,7 +63,7 @@ class Cleric extends pc
 		return stats;
 	}
 	
-	setStats: function(statSet)
+	set Stats(statSet)
 	{
 		this.stats.wis = statSet[0];
 		this.stats.str = statSet[1];
