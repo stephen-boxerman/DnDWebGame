@@ -1,6 +1,10 @@
 // JavaScript Document
 
+/*jshint esversion: 6 */ 
+
 "use strict";
+
+const cleric = require(['Cleric'])
 
 var classes = ["Cleric","Druid", "Fighter", "Mist Walker","Monk","Paladin","Ranger","Sorcerer","Wizard","Warlock"];
 var races = ["Wolf","Lion","Horse","Otter","Alligator","Orca","Dragon","Pheonix","Griphon","Naga"];
@@ -8,6 +12,8 @@ var classText = [clericText, druidText, fighterText, mwText, monkText, paladinTe
 var raceText = [wolfText, lionText, horseText, otterText, alligatorText, orcaText, dragonText, pheonixText, griphonText, nagaText];
 var buttons = [];
 var display = document.getElementById('display');
+var chosenClass;
+var player;
 
 for(var i = 1; i < 11; i++)
 {
@@ -29,6 +35,7 @@ function start_game()
 	buttons[3].innerHTML = "Load Game";
 	buttons[3].disabled = true;
 	buttons[1].addEventListener("click", newGame);
+	display.innerHTML = "";
 }
 
 function newGame(e)
@@ -101,9 +108,18 @@ function classEvents(e)
 	{
 		if(e.target === buttons[i])
 		{
+			chosenClass = classes[i];
 			display.innerHTML = classText[i];
 		}
 	}
+}
+
+function returnToClasses(e)
+{
+	e.target.removeEventListener(e.type, returnToClasses);
+	displayClasses();
+	chosenClass = "";
+	display.innerHTML = backToClasses;
 }
 
 function raceEvents(e)
@@ -133,6 +149,14 @@ function displayRaces(e)
 	e.target.removeEventListener(e.type, displayRaces);
 	buttons[3].removeEventListener('click', returnToClasses);
 	
+	switch(chosenClass)
+	{
+			case("Cleric"):
+			{
+				player = new Cleric();
+			}
+	}
+	
 	display.innerHTML = choseRace;
 	
 	for(var i = 0; i < 10; i++)
@@ -141,6 +165,11 @@ function displayRaces(e)
 		buttons[i].innerHTML = races[i];
 		buttons[i].addEventListener('click', raceEvents);
 	}
+}
+
+function setStats(stats)
+{
+	stats[1] = player.stats.str;
 }
 
 function hideRaces()
@@ -166,13 +195,6 @@ function returnToRaces(e)
 		buttons[i].innerHTML = races[i];
 		buttons[i].addEventListener('click', raceEvents);
 	}
-}
-
-function returnToClasses(e)
-{
-	e.target.removeEventListener(e.type, returnToClasses);
-	displayClasses();
-	display.innerHTML = backToClasses;
 }
 								
 
