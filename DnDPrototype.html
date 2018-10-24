@@ -11,18 +11,18 @@
   <tbody>
     <tr>
       <td width="18%" height="227">
-		  <div class="stat">Content for  class "stat" Goes Here</div>
-		  <div class="stat">Content for  class "stat" Goes Here</div>
-		  <div class="stat">Content for  class "stat" Goes Here</div>
-		  <div class="stat">Content for  class "stat" Goes Here</div>
-		  <div class="stat">Content for  class "stat" Goes Here</div>
-		  <div class="stat">Content for  class "stat" Goes Here</div>
+		  <div class="stat" id="str"></div>
+		  <div class="stat" id="dex"></div>
+		  <div class="stat" id="con"></div>
+		  <div class="stat" id="int"></div>
+		  <div class="stat" id="wis"></div>
+		  <div class="stat" id="cha"></div>
 		</td>
       <td colspan="3" rowspan="4"><div class="display" id="display">Content for  class "display" Goes He</div></td>
     </tr>
     <tr>
-      <td height="187"><div class="gold" margin-botome>Content for  class "stat" Goes Here</div>
-      <div class="town">Content for  class "town" Goes Here</div></td>
+      <td height="187"><div class="gold" margin-botome>Gold: </div>
+      <div class="town" id="town">Town<br></div></td>
     </tr>
     <tr>
       <td height="38">&nbsp;</td>
@@ -47,23 +47,35 @@
       <td width="6%">&nbsp;</td>
     </tr>
   </tbody>
-</table>
-<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
-<script>
-	$(document).ready (function(){
-		var element = document.createElement("script");
-		element.src = "text.js";
-		document.body.appendChild(element);
-	});
-</script>
-<script>
-	$( window ).on( "load", function()
-	{
-		var element = document.createElement("script");
-		element.src = "DnDCode.js";
-		document.body.appendChild(element);
-	})
-</script>
+	</table>
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="Player.js"></script>
+	<script src="Cleric.js"></script>
+	<script src="Druid.js"></script>
+	<script src="Fighter.js"></script>
+	<script src="MistWalker.js"></script>
+	<script src="Monk.js"></script>
+	<script src="Paladin.js"></script>
+	<script src="Ranger.js"></script>
+	<script src="Sorcerer.js"></script>
+	<script src="Warlock.js"></script>
+	<script src="Wizard.js"></script>
+	<script src="mainDisplay.js"></script>
+	<script>
+		$(document).ready (function(){
+			var element = document.createElement("script");
+			element.src = "text.js";
+			document.body.appendChild(element);
+			console.log("text.js loaded")
+		});
+	</script>
+	<script>
+		$( window ).on( "load", function()
+		{
+			var element = document.createElement("script");
+			element.src = "DnDCode.js";
+			document.body.appendChild(element);
+		})
+	</script>
 </body>
 </html>

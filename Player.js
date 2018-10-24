@@ -6,6 +6,10 @@ class Player
 {	
 	constructor()
 	{
+		
+		
+		this.MainStats = {};
+		console.log("running constructor")
 		this.race = "";
 		this.occupation = "";
 		this.level = 1;
@@ -15,51 +19,87 @@ class Player
 		this.AC = 0;
 		this.numHitDice = 1;
 		
-		this.stats = {};
-		this.stats.str = 0;
-		this.stats.dex = 0;
-		this.stats.con = 0;
-		this.stats.int = 0;
-		this.stats.wis = 0;
-		this.stats.cha = 0;
+		console.log("creating stats json");
+		console.log("stats json created");
 		
-		this.statMods = {};
-		this.statMods.str = 0;
-		this.statMods.dex = 0;
-		this.statMods.con = 0;
-		this.statmods.int = 0;
-		this.statmods.wis = 0;
-		this.statMods.cha = 0;
+		this.statMods = [0,0,0,0,0,0]
 		
 		this.gold = 0;
 		
+		console.log("cunstructor finished");
 	}
 	
-	get race()
+	getRace()
 	{
 		return this.race;
 	}
 	
-	set race(race)
+	setRace(race)
 	{
 		this.race = race;
+		console.log(this.race);
+		switch(this.race)
+			{
+					case("Wolf"):
+					{
+						console.log("hello")
+						this.MainStats.int += 2;
+						break;
+					}
+					case("Lion"):
+					{
+						break;
+					}
+					case("Horse"):
+					{
+						break;
+					}
+					case("Otter"):
+					{
+						break;
+					}
+					case("Alligator"):
+					{
+						break;
+					}
+					case("Dragon"):
+					{
+						break;
+					}
+					case("Phoenix"):
+					{
+						break;
+					}
+					case("Orca"):
+					{
+						break;
+					}
+					case("Griphon"):
+					{
+						break;
+					}
+					case("Naga"):
+					{
+						break;
+					}
+			}
 	}
 	
 	/////////
 	
-	get level()
+	getLevel()
 	{
 		return this.level;
 	}
 
 	////////////
 
-	get exp()
+	getExp()
 	{
 		return this.exp;
 	}
 	
-	set exp(newEXP)
+	setExp(newEXP)
 	{
 		this.exp += newEXP;
 		
@@ -74,27 +114,27 @@ class Player
 			}
 	}
 	
-	get prof()
+	getProf()
 	{
 		return this.prof;
 	}
 	
-	get ac()
+	getAC()
 	{
 		return this.AC;
 	}
 	
-	get numHitDice()
+	getNumHitDice()
 	{
 		return this.numHitDice;
 	}
 	
-	get gold()
+	getGold()
 	{
 		return this.gold;
 	}
 	
-	set gold(num)
+	setGold(num)
 	{
 		this.gold += num;
 	}

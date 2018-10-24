@@ -4,7 +4,7 @@
 
 'use strict';
 
-class Cleric extends Player
+class Druid extends Player
 {
 	constructor()
 	{
@@ -21,10 +21,10 @@ class Cleric extends Player
 	setMainStats(statSet)
 	{
 		this.MainStats.wis = statSet[0];
-		this.MainStats.str = statSet[1];
-		this.MainStats.con = statSet[2];
-		this.MainStats.dex = statSet[3];
-		this.MainStats.int = statSet[4];
+		this.MainStats.con = statSet[1];
+		this.MainStats.dex = statSet[2];
+		this.MainStats.int = statSet[3];
+		this.MainStats.str = statSet[4];
 		this.MainStats.cha = statSet[5];
 	}
 	

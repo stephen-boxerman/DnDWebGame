@@ -7,8 +7,9 @@ div.stat
 	border: solid black 1px;
 	margin-left: 15px;
 	margin-bottom: 15px;
-	width: 200px;
+	width: 125px;
 	height: 25px;
+	padding-left: 10px;
 }
 div.town
 {
@@ -17,6 +18,7 @@ div.town
 	margin-bottom: 15px;
 	width: 200px;
 	height: 50px;
+	text-align: center;
 }
 
 div.gold
@@ -24,8 +26,9 @@ div.gold
 	border: solid black 1px;
 	margin-left: 15px;
 	margin-bottom: 35px;
-	width: 200px;
+	width: 125px;
 	height: 25px;
+	padding-left: 10px;
 }
 
 div.display
