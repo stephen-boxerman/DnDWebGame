@@ -31,3 +31,9 @@ class Cleric extends Player
 	
 	
 }
+
+//wis +2
+//str +2
+//dex +3
+//cha +2
+//int +1

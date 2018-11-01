@@ -148,6 +148,7 @@ function raceEvents(e)
 		{
 			chosenRace = races[i];
 			display.innerHTML = raceText[i];
+			console.log(chosenClass)
 		}
 	}
 }
