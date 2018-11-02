@@ -4,6 +4,8 @@
 
 "use strict";
 
+var first = new Node();
+
 var citys = ["Hivala", "Orafield", "Dadasa", "Nodross","Oniset","Ophison","Wawood","Sison","Arcron","Grock"]
 var currentCity;
 
@@ -403,9 +405,9 @@ function grockExplore()
 
 function explore(e)
 {
-	for(var i = 0; i < 10, i++)
+	for(var i = 0; i < 10; i++)
 		{
-			if(e.target = buttons[i])
+			//if(e.target = buttons[i])
 				
 		}
 }
