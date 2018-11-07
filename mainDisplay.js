@@ -70,6 +70,7 @@ function mainDisplay()
 	townDiv.innerHTML = "Town<br><b>" + currentCity + "</b>";
 	
 	disableAll()
+	hideAll()
 	
 	buttons[0].innerHTML = "Inventory";
 	buttons[0].style.visibility = "visible";
@@ -103,11 +104,17 @@ function exploreOptions(e)
 	enableAll();
 	hideAll();
 	
+	for(var i = 0; i < 10; i++)
+		{
+			buttons[i].innerHTML = citys[i];
+			buttons[i].addEventListener('click', explore);
+		}
+	
 	switch(currentCity)
 		{
 				case(citys[0]):
 				{
-					hivalaExplore()
+					hivalaExplore();
 					break;
 				}
 				case(citys[1]):
@@ -117,7 +124,7 @@ function exploreOptions(e)
 				}
 				case(citys[2]):
 				{
-					dadasaEsplore();
+					dadasaExplore();
 					break;
 				}
 				case(citys[3]):
@@ -193,221 +200,186 @@ function enableAll()
 
 function hivalaExplore()
 {
-	buttons[1].style.visibility = "visible";
-	buttons[1].innerHTML = citys[3];
-
-	buttons[2].style.visibility = "visible";
-	buttons[2].innerHTML = citys[9];
-
 	buttons[3].style.visibility = "visible";
-	buttons[3].innerHTML = citys[4];
 
-	buttons[7].style.visibility = "visible";
-	buttons[7].innerHTML = currentCity;
+	buttons[9].style.visibility = "visible";
+
+	buttons[4].style.visibility = "visible";
+
+	buttons[0].style.visibility = "visible";
+	buttons[0].removeEventListener('click', explore);
+	buttons[0].disabled = true;
 }
 
 function orafieldExplore()
 {
-	buttons[1].style.visibility = "visible";
-	buttons[1].innerHTML = citys[6];
+	buttons[6].style.visibility = "visible";
+
+	buttons[7].style.visibility = "visible";
 
 	buttons[2].style.visibility = "visible";
-	buttons[2].innerHTML = citys[7];
-
-	buttons[3].style.visibility = "visible";
-	buttons[3].innerHTML = citys[9];
 	
-	buttons[7].style.visibility = "visible";
-	buttons[7].innerHTML = currentCity;
+	buttons[1].style.visibility = "visible";
+	buttons[1].removeEventListener('click', explore);
+	buttons[1].disabled = true;
 }
 
 function dadasaExplore()
 {
+	buttons[6].style.visibility = "visible";
+
+	buttons[7].style.visibility = "visible";
+
+	buttons[9].style.visibility = "visible";
+	
 	buttons[1].style.visibility = "visible";
-	buttons[1].innerHTML = citys[6];
 
 	buttons[2].style.visibility = "visible";
-	buttons[2].innerHTML = citys[7];
-
-	buttons[3].style.visibility = "visible";
-	buttons[3].innerHTML = citys[9];
-	
-	buttons[6].style.visibility = "visible";
-	buttons[6].innerHTML = citys[2]
-
-	buttons[8].style.visibility = "visible";
-	buttons[8].innerHTML = currentCity;
+	buttons[2].removeEventListener('click', explore);
+	buttons[2].disabled = true;
 }
 
 function nodrossExplore()
 {
-	buttons[1].style.visibility = "visible";
-	buttons[1].innerHTML = citys[9];
+	buttons[9].style.visibility = "visible";
 
-	buttons[2].style.visibility = "visible";
-	buttons[2].innerHTML = citys[4];
+	buttons[4].style.visibility = "visible";
 
-	buttons[3].style.visibility = "visible";
-	buttons[3].innerHTML = citys[0];
+	buttons[0].style.visibility = "visible";
 	
-	buttons[7].style.visibility = "visible";
-	buttons[7].innerHTML = currentCity;
+	buttons[3].style.visibility = "visible";
+	buttons[3].removeEventListener('click', explore);
+	buttons[3].disabled = true;
 }
 
 function onisetExplore()
 {
-	buttons[1].style.visibility = "visible";
-	buttons[1].innerHTML = citys[5];
+	buttons[5].style.visibility = "visible";
 
-	buttons[2].style.visibility = "visible";
-	buttons[2].innerHTML = citys[7];
-
-	buttons[3].style.visibility = "visible";
-	buttons[3].innerHTML = citys[9];
-	
-	buttons[6].style.visibility = "visible";
-	buttons[6].innerHTML = citys[3];
-	
 	buttons[7].style.visibility = "visible";
-	buttons[7].innerHTML = currentCity;
+
+	buttons[9].style.visibility = "visible";
 	
-	buttons[8].style.visibility = "visible"
-	buttons[8].innerHTML = citys[0];
+	buttons[3].style.visibility = "visible";
+	
+	buttons[4].style.visibility = "visible";
+	buttons[4].removeEventListener('click', explore);
+	buttons[4].disabled = true;
+	
+	buttons[0].style.visibility = "visible";
 }
 
 //["Hivala", "Orafield", "Dadasa", "Nodross","Oniset","Ophison","Wawood","Sison","Arcron","Grock"]
 
 function ophisonExplore()
 {
-	buttons[1].style.visibility = "visible";
-	buttons[1].innerHTML = citys[4];
+	buttons[4].style.visibility = "visible";
 
-	buttons[2].style.visibility = "visible";
-	buttons[2].innerHTML = citys[7];
+	buttons[7].style.visibility = "visible";
 
-	buttons[3].style.visibility = "visible";
-	buttons[3].innerHTML = citys[9];
+	buttons[9].style.visibility = "visible";
 	
 	buttons[6].style.visibility = "visible";
-	buttons[6].innerHTML = citys[6];
 	
-	buttons[7].style.visibility = "visible";
-	buttons[7].innerHTML = currentCity;
+	buttons[5].style.visibility = "visible";
+	buttons[5].removeEventListener('click', explore);
+	buttons[5].disabled = true;
 	
-	buttons[8].style.visibility = "visible"
-	buttons[8].innerHTML = citys[8];
+	buttons[8].style.visibility = "visible";
 }
 
 function wawoodExplore()
 {
-	buttons[0].style.visibility = "visible";
-	buttons[0].innerHTML = citys[2]
-	
-	buttons[1].style.visibility = "visible";
-	buttons[1].innerHTML = citys[5];
-
 	buttons[2].style.visibility = "visible";
-	buttons[2].innerHTML = citys[7];
-
-	buttons[3].style.visibility = "visible";
-	buttons[3].innerHTML = citys[9];
 	
 	buttons[5].style.visibility = "visible";
-	buttons[5].innerHTML = citys[4]
+
+	buttons[7].style.visibility = "visible";
+
+	buttons[9].style.visibility = "visible";
+	
+	buttons[4].style.visibility = "visible";
+	
+	buttons[3].style.visibility = "visible";
 	
 	buttons[6].style.visibility = "visible";
-	buttons[6].innerHTML = citys[3];
-	
-	buttons[7].style.visibility = "visible";
-	buttons[7].innerHTML = currentCity;
+	buttons[6].removeEventListener('click', explore);
+	buttons[6].disabled = true;
 	
 	buttons[8].style.visibility = "visible";
-	buttons[8].innerHTML = citys[8];
 	
 }
 
 function sisonExplore()
 {
-	buttons[0].style.visibility = "visible";
-	buttons[0].innerHTML = citys[2]
-	
-	buttons[1].style.visibility = "visible";
-	buttons[1].innerHTML = citys[5];
-
 	buttons[2].style.visibility = "visible";
-	buttons[2].innerHTML = citys[6];
-
-	buttons[3].style.visibility = "visible";
-	buttons[3].innerHTML = citys[9];
 	
 	buttons[5].style.visibility = "visible";
-	buttons[5].innerHTML = citys[4]
-	
+
 	buttons[6].style.visibility = "visible";
-	buttons[6].innerHTML = citys[3];
+
+	buttons[9].style.visibility = "visible";
+	
+	buttons[4].style.visibility = "visible";
+	
+	buttons[3].style.visibility = "visible";
 	
 	buttons[7].style.visibility = "visible";
-	buttons[7].innerHTML = currentCity;
+	buttons[7].removeEventListener('click', explore);
+	buttons[7].disabled = true;
 	
 	buttons[8].style.visibility = "visible";
-	buttons[8].innerHTML = citys[8];
 }
 
 //["Hivala", "Orafield", "Dadasa", "Nodross","Oniset","Ophison","Wawood","Sison","Arcron","Grock"]
 
 function arcronExplore()
 {
-	buttons[1].style.visibility = "visible";
-	buttons[1].innerHTML = citys[6];
-
-	buttons[2].style.visibility = "visible";
-	buttons[2].innerHTML = citys[7];
-
-	buttons[3].style.visibility = "visible";
-	buttons[3].innerHTML = citys[9];
-	
 	buttons[6].style.visibility = "visible";
-	buttons[6].innerHTML = citys[5]
+
+	buttons[7].style.visibility = "visible";
+
+	buttons[9].style.visibility = "visible";
+	
+	buttons[5].style.visibility = "visible";
 
 	buttons[8].style.visibility = "visible";
-	buttons[8].innerHTML = currentCity;
+	buttons[8].removeEventListener('click', explore);
+	buttons[8].disabled = true;
 }
 
 function grockExplore()
 {
-	buttons[0].style.visibility = "visible";
-	buttons[0].innerHTML = citys[2]
-	
-	buttons[1].style.visibility = "visible";
-	buttons[1].innerHTML = citys[7];
-
 	buttons[2].style.visibility = "visible";
-	buttons[2].innerHTML = citys[6];
-
-	buttons[3].style.visibility = "visible";
-	buttons[3].innerHTML = citys[0];
-	
-	buttons[4].style.visibility = "visible";
-	buttons[4].innerHTML = citys[5]
-	
-	buttons[5].style.visibility = "visible";
-	buttons[5].innerHTML = citys[4]
-	
-	buttons[6].style.visibility = "visible";
-	buttons[6].innerHTML = citys[3];
 	
 	buttons[7].style.visibility = "visible";
-	buttons[7].innerHTML = currentCity;
+
+	buttons[6].style.visibility = "visible";
+
+	buttons[0].style.visibility = "visible";
+	
+	buttons[5].style.visibility = "visible";
+	
+	buttons[4].style.visibility = "visible";
+	
+	buttons[3].style.visibility = "visible";
+	
+	buttons[9].style.visibility = "visible";
+	buttons[9].removeEventListener('click', explore);
+	buttons[9].disabled = true;
 	
 	buttons[8].style.visibility = "visible";
-	buttons[8].innerHTML = citys[8];
 }
 
 function explore(e)
 {
 	for(var i = 0; i < 10; i++)
 		{
-			//if(e.target = buttons[i])
-				
+			buttons[i].removeEventListener(e.type, explore)
+			if(e.target = buttons[i])
+				{
+					currentCity = citys[i]
+					mainDisplay()
+				}
 		}
 }
