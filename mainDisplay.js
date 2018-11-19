@@ -12,9 +12,11 @@ var townDiv = document.getElementById("town");
 function mainDisplay()
 {
 	townDiv.innerHTML = "Town<br><b>" + currentCity + "</b>";
-	
-	disableAll();
-	hideAll();
+
+=======
+	disableAll()
+	hideAll()
+>>>>>>> exploration
 	
 	buttons[0].innerHTML = "Inventory";
 	buttons[0].style.visibility = "visible";
@@ -47,18 +49,19 @@ function exploreOptions(e)
 	buttons[0].innerHTML = currentCity;
 	enableAll();
 	hideAll();
-	
-	for(var i = 0; i < 10; i ++)
+=======
+	for(var i = 0; i < 10; i++)
 		{
 			buttons[i].innerHTML = citys[i];
-			buttons[i].addEventListener('click', explore)
+			buttons[i].addEventListener('click', explore);
+>>>>>>> exploration
 		}
 	
 	switch(currentCity)
 		{
 				case(citys[0]):
 				{
-					hivalaExplore()
+					hivalaExplore();
 					break;
 				}
 				case(citys[1]):
@@ -151,6 +154,9 @@ function hivalaExplore()
 	buttons[4].style.visibility = "visible";
 
 	buttons[0].style.visibility = "visible";
+=======
+	buttons[0].removeEventListener('click', explore);
+>>>>>>> exploration
 	buttons[0].disabled = true;
 }
 
@@ -160,9 +166,12 @@ function orafieldExplore()
 
 	buttons[7].style.visibility = "visible";
 
-	buttons[9].style.visibility = "visible";
-	
+=======
+	buttons[2].style.visibility = "visible";
+
 	buttons[1].style.visibility = "visible";
+	buttons[1].removeEventListener('click', explore);
+>>>>>>> exploration
 	buttons[1].disabled = true;
 }
 
@@ -177,6 +186,10 @@ function dadasaExplore()
 	buttons[1].style.visibility = "visible";
 
 	buttons[2].style.visibility = "visible";
+
+=======
+	buttons[2].removeEventListener('click', explore);
+>>>>>>> exploration
 	buttons[2].disabled = true;
 }
 
@@ -189,6 +202,10 @@ function nodrossExplore()
 	buttons[0].style.visibility = "visible";
 	
 	buttons[3].style.visibility = "visible";
+
+=======
+	buttons[3].removeEventListener('click', explore);
+>>>>>>> exploration
 	buttons[3].disabled = true;
 }
 
@@ -201,11 +218,14 @@ function onisetExplore()
 	buttons[9].style.visibility = "visible";
 	
 	buttons[3].style.visibility = "visible";
-	
-	buttons[0].style.visibility = "visible"
-	
+
+=======
 	buttons[4].style.visibility = "visible";
+	buttons[4].removeEventListener('click', explore);
 	buttons[4].disabled = true;
+
+	buttons[0].style.visibility = "visible";
+>>>>>>> exploration
 }
 
 //["Hivala", "Orafield", "Dadasa", "Nodross","Oniset","Ophison","Wawood","Sison","Arcron","Grock"]
@@ -219,12 +239,15 @@ function ophisonExplore()
 	buttons[9].style.visibility = "visible";
 	
 	buttons[6].style.visibility = "visible";
-	
-	buttons[8].style.visibility = "visible"
+
+=======
 	
 	buttons[5].style.visibility = "visible";
+	buttons[5].removeEventListener('click', explore);
 	buttons[5].disabled = true;
 	
+	buttons[8].style.visibility = "visible";
+>>>>>>> exploration
 }
 
 function wawoodExplore()
@@ -242,6 +265,9 @@ function wawoodExplore()
 	buttons[3].style.visibility = "visible";
 	
 	buttons[6].style.visibility = "visible";
+=======
+	buttons[6].removeEventListener('click', explore);
+>>>>>>> exploration
 	buttons[6].disabled = true;
 	
 	buttons[8].style.visibility = "visible";
@@ -263,6 +289,9 @@ function sisonExplore()
 	buttons[3].style.visibility = "visible";
 	
 	buttons[7].style.visibility = "visible";
+=======
+	buttons[7].removeEventListener('click', explore);
+>>>>>>> exploration
 	buttons[7].disabled = true;
 	
 	buttons[8].style.visibility = "visible";
@@ -281,6 +310,9 @@ function arcronExplore()
 	buttons[5].style.visibility = "visible";
 
 	buttons[8].style.visibility = "visible";
+=======
+	buttons[8].removeEventListener('click', explore);
+>>>>>>> exploration
 	buttons[8].disabled = true;
 }
 
@@ -301,6 +333,9 @@ function grockExplore()
 	buttons[3].style.visibility = "visible";
 	
 	buttons[9].style.visibility = "visible";
+=======
+	buttons[9].removeEventListener('click', explore);
+>>>>>>> exploration
 	buttons[9].disabled = true;
 	
 	buttons[8].style.visibility = "visible";
@@ -311,6 +346,7 @@ function explore(e)
 	for(var i = 0; i < 10; i++)
 		{
 			buttons[i].removeEventListener(e.type, explore)
+<<<<<<< HEAD
 			
 			if(e.target == buttons[i])
 				{
@@ -325,6 +361,7 @@ function explore(e)
 							currentCity = citys[i];
 							mainDisplay();
 						}
+=======
 				}
 		}
 	mainDisplay();
