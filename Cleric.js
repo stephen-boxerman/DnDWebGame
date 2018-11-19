@@ -9,13 +9,13 @@ class Cleric extends Player
 	constructor()
 	{
 		super();
-		console.log("cleric made");
+		this.hitDie = 10;
+		this.health = Math.floor((Math.random() * this.hitDie)) + 1;
 	}
 	
 	get mainStats()
 	{
 		console.log("geting main stats")
-		return this.MainStats;
 	}
 	
 	setMainStats(statSet)
@@ -26,6 +26,13 @@ class Cleric extends Player
 		this.MainStats.dex = statSet[3];
 		this.MainStats.int = statSet[4];
 		this.MainStats.cha = statSet[5];
+
+		for(var key in this.statMods)
+		{
+			this.setStatMod(key);
+		}
+
+		this.setAC
 	}
 	
 	

@@ -144,6 +144,7 @@ function raceEvents(e)
 	
 	for(var i = 0; i < 10; i++)
 	{
+		buttons[i].removeEventListener(e.type, raceEvents)
 		if(e.target === buttons[i])
 		{
 			chosenRace = races[i];
@@ -160,6 +161,60 @@ function raceSet(e)
 	
 	player.setRace(chosenRace);
 	showStats();
+	
+	switch(player.getRace())
+		{
+			case(races[0]):
+			{
+				currentCity = "Wawood";
+				break;
+			}
+			case(races[1]):
+			{
+				currentCity = "Dadasa";
+				break;
+			}
+			case(races[2]):
+			{
+				currentCity = "Hivala";
+				break;
+			}
+			case(races[3]):
+			{
+				currentCity = "Nodross";
+				break;
+			}
+			case(races[4]):
+			{
+				currentCity = "Grock";
+				break;
+			}
+			case(races[5]):
+			{
+				currentCity = "Orafield";
+				break;
+			}
+			case(races[6]):
+			{
+				currentCity = "Oniset";
+				break;
+			}
+			case(races[7]):
+			{
+				currentCity = "Ophison";
+				break;
+			}
+			case(races[8]):
+			{
+				currentCity = "Arcron";
+				break;
+			}
+			case(races[9]):
+			{
+				currentCity = "Sison";
+				break;
+			}
+		}
 	
 	mainDisplay();
 }
